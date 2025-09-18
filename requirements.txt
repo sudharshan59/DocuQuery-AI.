@@ -1,0 +1,17 @@
+torch
+torchvision
+torchaudio
+transformers>=4.34
+sentence-transformers
+faiss-cpu
+gradio
+PyPDF2
+beautifulsoup4
+requests
+pillow
+pytesseract
+pandas
+opencv-python
+pdfplumber
+git+https://github.com/openai/whisper.git
+yt-dlp
