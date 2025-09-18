@@ -35,22 +35,17 @@ Upload or paste links to:
 
 ## 🧠 RAG Architecture Overview
 
-```mermaid
-graph TD
-    A[Input File/URL] --> B[Text Extraction]
-    B --> C[Chunking & Embedding]
-    C --> D[FAISS Retrieval]
-    D --> E[TinyLlama Generation]
-    E --> F[Answer Display in Gradio]
-Ingest: Extracts text using OCR, Whisper, scraping, etc.
+RAG Pipeline Steps:
 
-Embed: Chunks and embeds using SentenceTransformers
+🧩 Ingest: Extracts text using OCR, Whisper, scraping, etc.
 
-Retrieve: Top-k relevant chunks via FAISS
+🧠 Embed: Chunks and embeds using SentenceTransformers
 
-Generate: TinyLlama answers using retrieved context
+🔍 Retrieve: Top-k relevant chunks via FAISS
 
-Cache: File hashes prevent redundant processing
+💬 Generate: TinyLlama answers using retrieved context
+
+❄️ Cache: File hashes prevent redundant processing
 
 📦 Installation
 ✅ Option 1: Run in Google Colab
