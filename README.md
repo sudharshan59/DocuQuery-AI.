@@ -1,7 +1,9 @@
 🤖 DocuQuery AI — Ask Smarter Questions About Any File, Video, or URL!
 One-click AI-powered Q&A for PDFs, CSVs, Images, Videos, Audio, Web Pages & YouTube — powered by TinyLlama, Whisper, SentenceTransformers, and Gradio. Deploy seamlessly to Hugging Face Spaces or run locally with ease!
 
-🔗 Open in Colab | 🚀 Try on Hugging Face Spaces | 🧠 GitHub Repo
+- [📘 Open in Colab](https://colab.research.google.com/drive/1QRzxm3EXek4IKs3rf9Po8ZS4__aV3YQU#scrollTo=kKlhgXUpBjH4)  
+- [🚀 Try on Hugging Face Spaces](https://huggingface.co/spaces/sudharshan001/DocuQuery-AI)  
+- [🧠 GitHub Repo](https://github.com/sudharshan59/DocuQuery-AI)
 
 🚀 Key Features
 Format	Capability
