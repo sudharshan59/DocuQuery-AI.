@@ -3,8 +3,8 @@
 **DocuQuery AI** is a lightweight, privacy-first RAG-based assistant that lets you ask intelligent questions about PDFs, CSVs, images, videos, audio, web pages, and YouTube links.  
 Powered by **TinyLlama**, **Whisper**, **SentenceTransformers**, and **FAISS**, with a beautiful **Gradio** interface.
 
-🔗 [Open in Colab](https://colab.research.google.com/github/sudharshan59/DocuQuery-AI/blob/main/docuquery_ai.ipynb)  
-🚀 [Try on Hugging Face Spaces](https://huggingface.co/spaces/sudharshanmonith/DocuQuery-AI)  
+🔗 [Open in Colab](https://colab.research.google.com/drive/1QRzxm3EXek4IKs3rf9Po8ZS4__aV3YQU?usp=sharing)  
+🚀 [Try on Hugging Face Spaces](https://huggingface.co/spaces/sudharshan001/DocuQuery-AI)  
 🧠 [GitHub Repo](https://github.com/sudharshan59/DocuQuery-AI)
 
 ---
