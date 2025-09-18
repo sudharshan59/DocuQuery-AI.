@@ -1,36 +1,60 @@
-🤖 DocuQuery AI — Ask Smarter Questions About Any File, Video, or URL!
-One-click AI-powered Q&A for PDFs, CSVs, Images, Videos, Audio, Web Pages & YouTube — powered by TinyLlama, Whisper, SentenceTransformers, and Gradio. Deploy seamlessly to Hugging Face Spaces or run locally with ease!
+# 🤖 DocuQuery AI — Ask Questions About Any Document, Video, or URL!
 
-- [📘 Open in Colab](https://colab.research.google.com/drive/1QRzxm3EXek4IKs3rf9Po8ZS4__aV3YQU#scrollTo=kKlhgXUpBjH4)  
-- [🚀 Try on Hugging Face Spaces](https://huggingface.co/spaces/sudharshan001/DocuQuery-AI)  
-- [🧠 GitHub Repo](https://github.com/sudharshan59/DocuQuery-AI)
+**DocuQuery AI** is a lightweight, privacy-first RAG-based assistant that lets you ask intelligent questions about PDFs, CSVs, images, videos, audio, web pages, and YouTube links.  
+Powered by **TinyLlama**, **Whisper**, **SentenceTransformers**, and **FAISS**, with a beautiful **Gradio** interface.
 
-🚀 Key Features
-Format	Capability
-📄 PDF	Clean text extraction via pdfplumber
-📊 CSV	Structured data parsing
-🖼️ Image	OCR with pytesseract
-🎥 Video	Audio extraction + transcription
-🎧 Audio	Transcription via Whisper
-🌐 Web URL	Scraping + cleaning
-▶️ YouTube	Auto-download + transcribe
-🧠 AI-Powered Q&A
-TinyLlama-1.1B-Chat — lightweight, fast, and surprisingly smart
+🔗 [Open in Colab](https://colab.research.google.com/github/sudharshan59/DocuQuery-AI/blob/main/docuquery_ai.ipynb)  
+🚀 [Try on Hugging Face Spaces](https://huggingface.co/spaces/sudharshanmonith/DocuQuery-AI)  
+🧠 [GitHub Repo](https://github.com/sudharshan59/DocuQuery-AI)
 
-MiniLM-L6-v2 — semantic search for relevant chunks
+---
 
-FAISS — blazing-fast similarity retrieval
+## 🚀 Features
 
-Smart Caching — skip reprocessing for repeated files
+✅ **Multi-Format Support**  
+Upload or paste links to:
+- 📄 PDFs (via `pdfplumber`)
+- 📊 CSVs
+- 🖼️ Images (OCR with `pytesseract`)
+- 🎥 Local Videos (audio extracted + transcribed)
+- 🎧 Audio Files (transcribed with `Whisper`)
+- 🌐 Web URLs (scraped & cleaned)
+- ▶️ YouTube Videos (auto-download + transcribe)
 
-🌈 Beautiful UI
-Built with Gradio — intuitive, shareable, and production-ready
+✅ **AI-Powered Q&A**  
+- 🔍 Semantic search with `all-MiniLM-L6-v2`
+- ⚡ Fast retrieval using `FAISS`
+- 🧠 Context-aware answers via `TinyLlama-1.1B-Chat`
+- 🧊 Smart caching — no reprocessing for repeated files
 
-One-click deploy to Hugging Face Spaces or Google Colab
+✅ **Gradio UI**  
+- Intuitive, shareable interface
+- One-click deploy to Hugging Face Spaces or Colab
 
-⚙️ Installation & Setup
-✅ Option 1: Run in Google Colab (Beginner-Friendly)
-Just click the badge above — everything installs automatically!
+---
+
+## 🧠 RAG Architecture Overview
+
+```mermaid
+graph TD
+    A[Input File/URL] --> B[Text Extraction]
+    B --> C[Chunking & Embedding]
+    C --> D[FAISS Retrieval]
+    D --> E[TinyLlama Generation]
+    E --> F[Answer Display in Gradio]
+Ingest: Extracts text using OCR, Whisper, scraping, etc.
+
+Embed: Chunks and embeds using SentenceTransformers
+
+Retrieve: Top-k relevant chunks via FAISS
+
+Generate: TinyLlama answers using retrieved context
+
+Cache: File hashes prevent redundant processing
+
+📦 Installation
+✅ Option 1: Run in Google Colab
+Click the badge above — everything installs automatically!
 
 🖥️ Option 2: Run Locally
 bash
@@ -49,30 +73,30 @@ sudo apt-get update && sudo apt-get install -y tesseract-ocr ffmpeg libgl1 libgl
 
 # Launch the app
 python docuquery_ai.py
-💡 GPU acceleration recommended for Whisper + TinyLlama
+🖥️ Usage
+After launching, you'll see a Gradio link like:
 
-🧠 How It Works
-Ingest — Extracts text from any source (OCR, Whisper, scraping, etc.)
+Code
+Public URL:.[LIVE](https://huggingface.co/spaces/sudharshan001/DocuQuery-AI)
+Then:
 
-Chunk & Embed — Splits text and creates vector embeddings
+📂 Upload a file or paste a URL
 
-Retrieve — Finds top-k relevant chunks using FAISS
+❓ Ask any question — e.g., “Summarize this in 3 bullet points”
 
-Generate — TinyLlama answers using retrieved context (RAG pipeline)
+💡 Get instant answers powered by TinyLlama + retrieved context
 
-Cache — Hashes files to avoid reprocessing — saves time & GPU!
+🎯 Example Queries
+“What are the key findings in this PDF?”
 
-🎯 Use Cases
-“Summarize this PDF in 3 bullet points”
-
-“What are the key findings from this CSV?”
-
-“What did the speaker say in this YouTube video?”
+“Summarize this YouTube video”
 
 “Extract and explain the data from this image”
 
-🤝 Contribute & Collaborate
-We welcome your ideas and improvements!
+“What does this CSV reveal about trends?”
+
+🙌 Contributing
+We welcome contributions!
 
 🐞 Report bugs
 
@@ -82,10 +106,12 @@ We welcome your ideas and improvements!
 
 🆕 Add support for new formats
 
-📜 License
-MIT License — Free to use, modify, and distribute!
+Fork the repo and submit a PR!
 
-🙌 Built With Love Using
+📜 License
+MIT License — Free to use, modify, and distribute.
+
+🙏 Acknowledgements
 🤗 Hugging Face — Models & Spaces
 
 🧠 OpenAI Whisper — Audio transcription
@@ -95,7 +121,6 @@ MIT License — Free to use, modify, and distribute!
 📄 pdfplumber — Clean PDF extraction
 
 🎨 Gradio — Stunning UI in minutes
+
 ✍️ Created with ❤️ by Sudharshanmonith
 🔧 Systems Architect | 🧠 ML/NLP Engineer | 🔐 Privacy-First Builder Crafting secure, scalable AI tools for real-world impact.
-
-📬 Connect on GitHub 📢 Contributions & feedback welcome!
