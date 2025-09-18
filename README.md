@@ -28,7 +28,7 @@ Upload or paste links to:
 - 🧊 Smart caching — no reprocessing for repeated files
 
 ✅ **Gradio UI**  
-- Intuitive, shareable interface
+- Intuitive, shareable interface  
 - One-click deploy to Hugging Face Spaces or Colab
 
 ---
@@ -77,7 +77,9 @@ python docuquery_ai.py
 After launching, you'll see a Gradio link like:
 
 Code
-Public URL:.[LIVE](https://huggingface.co/spaces/sudharshan001/DocuQuery-AI)
+Public URL: https://xxx-xxx-xxx.gradio.live
+Or try it live: 🔴 LIVE Demo
+
 Then:
 
 📂 Upload a file or paste a URL
