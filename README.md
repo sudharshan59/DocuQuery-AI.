@@ -1,47 +1,42 @@
-🤖 DocuQuery AI — Ask Questions About Any Document, Video, or URL!
-One-click AI-powered Q&A for PDFs, CSVs, Images, Videos, Audio, Web Pages & YouTube!
-Powered by TinyLlama, Whisper, SentenceTransformers, and Gradio — deployable to Hugging Face Spaces! 
+🤖 DocuQuery AI — Ask Smarter Questions About Any File, Video, or URL!
+One-click AI-powered Q&A for PDFs, CSVs, Images, Videos, Audio, Web Pages & YouTube — powered by TinyLlama, Whisper, SentenceTransformers, and Gradio. Deploy seamlessly to Hugging Face Spaces or run locally with ease!
 
-Open In Colab
+🔗 Open in Colab | 🚀 Try on Hugging Face Spaces | 🧠 GitHub Repo
 
-Hugging Face Spaces
+🚀 Key Features
+Format	Capability
+📄 PDF	Clean text extraction via pdfplumber
+📊 CSV	Structured data parsing
+🖼️ Image	OCR with pytesseract
+🎥 Video	Audio extraction + transcription
+🎧 Audio	Transcription via Whisper
+🌐 Web URL	Scraping + cleaning
+▶️ YouTube	Auto-download + transcribe
+🧠 AI-Powered Q&A
+TinyLlama-1.1B-Chat — lightweight, fast, and surprisingly smart
 
-Python 3.8+
+MiniLM-L6-v2 — semantic search for relevant chunks
 
-License: MIT
+FAISS — blazing-fast similarity retrieval
 
-🚀 Features
-✅ Multi-Format Support — Upload or paste links to:
+Smart Caching — skip reprocessing for repeated files
 
-📄 PDFs (with pdfplumber for clean text)
-📊 CSVs
-🖼️ Images (OCR via pytesseract)
-🎥 Local Videos (audio extracted + transcribed)
-🎧 Audio Files (transcribed with Whisper)
-🌐 Web URLs (scraped & cleaned)
-▶️ YouTube Videos (auto-download + transcribe!)
-🧠 AI-Powered Q&A using:
+🌈 Beautiful UI
+Built with Gradio — intuitive, shareable, and production-ready
 
-TinyLlama/TinyLlama-1.1B-Chat-v1.0 — fast, lightweight, surprisingly smart!
-all-MiniLM-L6-v2 — for semantic retrieval
-FAISS — for lightning-fast similarity search
-⚡ Smart Caching — Same file? No reprocessing!
-🌐 Gradio UI — Beautiful, intuitive, shareable interface
-☁️ One-Click Deploy — Ready for Hugging Face Spaces or Colab!
+One-click deploy to Hugging Face Spaces or Google Colab
 
-📦 Installation & Setup
-Option 1: Run in Google Colab (Recommended for Beginners)
-👉Open In Colab
-
+⚙️ Installation & Setup
+✅ Option 1: Run in Google Colab (Beginner-Friendly)
 Just click the badge above — everything installs automatically!
 
-Option 2: Run Locally
-
+🖥️ Option 2: Run Locally
+bash
 # Clone the repo
-git clone https://github.com/yourusername/docuquery-ai.git
-cd docuquery-ai
+git clone https://github.com/sudharshan59/DocuQuery-AI.git
+cd DocuQuery-AI
 
-# Install dependencies (CUDA 11.8 recommended)
+# Install dependencies (CUDA 11.8+ recommended)
 pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
 pip install transformers sentence-transformers faiss-cpu gradio PyPDF2 beautifulsoup4 requests pillow pytesseract pandas opencv-python pdfplumber
 pip install git+https://github.com/openai/whisper.git
@@ -50,46 +45,55 @@ pip install yt-dlp
 # Install system packages (Linux/WSL)
 sudo apt-get update && sudo apt-get install -y tesseract-ocr ffmpeg libgl1 libglib2.0-0
 
-# Run the app
+# Launch the app
 python docuquery_ai.py
-
-💡 Note: For GPU acceleration, ensure you have CUDA 11.8+ and compatible drivers. 
-
-🖥️ Usage
-Launch the App — After running, you’ll see a Gradio link like:
-
-
-1
-Public URL: https://xxx-xxx-xxx.gradio.live
-Upload or Paste:
-📂 Upload a file (PDF, CSV, image, video, audio)
-🌐 Paste a URL (supports YouTube!)
-❓ Ask Any Question — e.g., “Summarize this in 3 bullet points” or “What are the key findings?”
-💡 Get Instant AI Answers — Powered by TinyLlama with retrieved context!
-🎥 Demo Preview
-DocuQuery AI Interface
-
-(Replace with actual screenshot when available)
+💡 GPU acceleration recommended for Whisper + TinyLlama
 
 🧠 How It Works
-Ingest → Extracts text from any source (OCR, Whisper, scraping, etc.)
-Chunk & Embed → Splits text and creates vector embeddings
-Retrieve → Finds top-k relevant chunks using FAISS
-Generate → TinyLlama answers using retrieved context (RAG pipeline)
-Cache → Hashes files to avoid reprocessing — saves time & GPU!
-🤝 Contributing
-Contributions are welcome! Please fork the repo and submit a PR.
+Ingest — Extracts text from any source (OCR, Whisper, scraping, etc.)
 
-Report bugs 🐞
-Suggest features 💡
-Improve documentation 📖
-Add new file format support 🆕
+Chunk & Embed — Splits text and creates vector embeddings
+
+Retrieve — Finds top-k relevant chunks using FAISS
+
+Generate — TinyLlama answers using retrieved context (RAG pipeline)
+
+Cache — Hashes files to avoid reprocessing — saves time & GPU!
+
+🎯 Use Cases
+“Summarize this PDF in 3 bullet points”
+
+“What are the key findings from this CSV?”
+
+“What did the speaker say in this YouTube video?”
+
+“Extract and explain the data from this image”
+
+🤝 Contribute & Collaborate
+We welcome your ideas and improvements!
+
+🐞 Report bugs
+
+💡 Suggest features
+
+📖 Improve documentation
+
+🆕 Add support for new formats
+
 📜 License
-MIT License — Feel free to use, modify, and distribute!
+MIT License — Free to use, modify, and distribute!
 
-🙌 Acknowledgements
-Hugging Face 🤗 — Models & Spaces
-OpenAI Whisper — Audio transcription
-yt-dlp — YouTube downloading
-pdfplumber — Superior PDF text extraction
-Gradio — Beautiful UI in minutes
+🙌 Built With Love Using
+🤗 Hugging Face — Models & Spaces
+
+🧠 OpenAI Whisper — Audio transcription
+
+📥 yt-dlp — YouTube downloading
+
+📄 pdfplumber — Clean PDF extraction
+
+🎨 Gradio — Stunning UI in minutes
+✍️ Created with ❤️ by Sudharshanmonith
+🔧 Systems Architect | 🧠 ML/NLP Engineer | 🔐 Privacy-First Builder Crafting secure, scalable AI tools for real-world impact.
+
+📬 Connect on GitHub 📢 Contributions & feedback welcome!
